@@ -11,12 +11,15 @@ if (message) {
 document.querySelector("#messageForm").addEventListener("submit", (event) => {
     event.preventDefault();
 
-    document.getElementById("messageForm").classList.add("hide");
-    document.getElementById("linkForm").classList.remove("hide");
-
     const messageInput = document.getElementById("messageInput");
     const encrypted = btoa(messageInput.value);
     const linkInput = document.getElementById("linkInput");
+
+    if (messageInput.value === "") return false;
+
+    document.getElementById("messageForm").classList.add("hide");
+    document.getElementById("linkForm").classList.remove("hide");
+
     linkInput.value = `${window.location}#${encrypted}`;
     linkInput.select();
 });
