@@ -1,0 +1,12 @@
+[
+  {
+    "email": "test3@test.com",
+    "password": "cc1387cde41cbea68629ac90dd6cb58d96ef2ddba41db082936eee1a9c4fe60b3cb61274e84edaaca0bb597b3fbbc307569a96f54030eae18df0507b9df64262.8e497c0c1f94843d",
+    "id": "6c3244d7"
+  },
+  {
+    "email": "user@test.loc",
+    "password": "54c854ce66f433d1b8135e64e57f817421dbcfe54892b624b46b9962cb3234f7e5226e7103f63443eea720864f16f1b9bddc5d925f757aa115813bf9adacd217.94a73ada2a61584e",
+    "id": "881d01de"
+  }
+]
