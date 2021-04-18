@@ -11,10 +11,12 @@ module.exports = {
             const existingUser = await usersRepo.getOneBy({ email });
             if (existingUser) throw new Error("Email in use!");
         }),
+
     requirePassword: check("password")
         .trim()
         .isLength({ min: 4, max: 20 })
         .withMessage("Must be between 4 and 20 characters"),
+
     requirePasswordConfirmation: check("passwordConfirmation")
         .trim()
         .isLength({ min: 4, max: 20 })
@@ -23,6 +25,7 @@ module.exports = {
             if (passwordConfirmation !== req.body.password)
                 throw new Error("Passwords must match!");
         }),
+
     requireEmailExists: check("email")
         .trim()
         .normalizeEmail()
@@ -32,6 +35,7 @@ module.exports = {
             const user = await usersRepo.getOneBy({ email });
             if (!user) throw new Error("Email not found!");
         }),
+
     requireValidPasswordForUser: check("password")
         .trim()
         .custom(async (password, { req }) => {
@@ -48,4 +52,15 @@ module.exports = {
 
             if (!validPassword) throw new Error("Invalid password!");
         }),
+
+    requireTitle: check("title")
+        .trim()
+        .isLength({ min: 5, max: 60 })
+        .withMessage("Must be between 5 and 60 characters"),
+
+    requirePrice: check("price")
+        .trim()
+        .toFloat()
+        .isFloat({ min: 1 })
+        .withMessage("Must be a number greater than 1"),
 };
