@@ -3,3 +3,12 @@
     align-items: center;
     justify-content: space-between;
 }
+.subtitle {
+    font-weight: bold;
+}
+.new-product .field:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+.new-product .field label {
+    cursor: pointer;
+}
