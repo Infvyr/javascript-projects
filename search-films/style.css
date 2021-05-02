@@ -13,20 +13,21 @@ body {
     min-height: 100vh;
     background: linear-gradient(to right, #ece9e6, #ffffff);
 }
-.autocomplete-films .dropdown.is-active .results {
+.dropdown.is-active .results {
     max-height: 30rem;
     max-width: 30rem;
     overflow-y: scroll;
 }
-.autocomplete-films .dropdown-item {
+.dropdown-item {
     display: grid;
     grid-template-columns: 64px 1fr;
     grid-column-gap: 12px;
     padding-right: 1rem;
 }
-.autocomplete-films .poster {
+.poster {
     /* display: inline-flex; */
     max-width: 64px;
 }
-.autocomplete-films .poster-title {
+.poster img {
+    display: block;
 }
