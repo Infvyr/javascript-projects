@@ -15,38 +15,21 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-full">
-                    <div class="content">
-                        <h1>Search Films</h1>
-                    </div>
+                <div class="column is-half notification is-primary tutorial">
+                    <h1 class="title">Search for a film on both sides</h1>
+                    <p class="subtitle">We will tell you which is the best!</p>
                 </div>
             </div>
             <div class="columns">
-                <div class="column is-half">
-                    <div class="box">
-                        <div class="field">
-                            <label for="searchFilm1"class="label"><i class="fas fa-film"></i> Search the 1st film</label>
-                            <div class="control">
-                                <input id="searchFilm1" class="input is-info" type="search" placeholder="Search a film...">
-                            </div>
-                        </div>
-                    </div>
+                <div class="column">
+                    <div id="left-autocomplete"></div>
+                    <div class="left-summary"></div>
                 </div>
-                <div class="column is-half">
-                    <div class="box">
-                        <div class="field">
-                            <label for="searchFilm2" class="label"><i class="fas fa-film"></i> Search the 2nd film</label>
-                            <div class="control">
-                                <input id="searchFilm2" class="input is-link" type="search" placeholder="Search a film...">
-                            </div>
-                        </div>
-                    </div>
+                <div class="column">
+                    <div id="right-autocomplete"></div>
+                    <div class="right-summary"></div>
                 </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="autocomplete"></div>
-            <div id="summary"></div>
         </div>
 
     <script src="https://kit.fontawesome.com/167d24c076.js" crossorigin="anonymous" defer></script>
