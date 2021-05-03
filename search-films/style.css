@@ -1,33 +1,36 @@
 *,
 *:after,
 *:before {
-    outline: 0;
+	outline: 0;
 }
 label {
-    cursor: pointer;
+	cursor: pointer;
 }
 input {
-    box-shadow: none !important;
+	box-shadow: none !important;
 }
 body {
-    min-height: 100vh;
-    background: linear-gradient(to right, #ece9e6, #ffffff);
+	min-height: 100vh;
+	background: linear-gradient(to right, #ece9e6, #ffffff);
 }
 .dropdown.is-active .results {
-    max-height: 30rem;
-    max-width: 30rem;
-    overflow-y: scroll;
+	max-height: 30rem;
+	overflow-y: scroll;
 }
-.dropdown-item {
-    display: grid;
-    grid-template-columns: 64px 1fr;
-    grid-column-gap: 12px;
-    padding-right: 1rem;
+.dropdown,
+.dropdown-menu {
+	width: 100%;
 }
-.poster {
-    /* display: inline-flex; */
-    max-width: 64px;
+.tutorial {
+	margin: auto;
 }
-.poster img {
-    display: block;
+.results .dropdownItem {
+	margin-bottom: 1rem;
+}
+.results .image {
+	max-width: 64px;
+}
+#left-autocomplete,
+#right-autocomplete {
+	margin-bottom: 1.5rem;
 }
