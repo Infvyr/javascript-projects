@@ -71,7 +71,7 @@ createAutoComplete({
 });
 
 const movieTemplate = (movieDetail) => {
-	const dollars = +movieDetail.BoxOffice.replace(/\$/g, '').replace(/,/g, '');
+	const dollars = movieDetail.BoxOffice ? +movieDetail.BoxOffice.replace(/\$/g, '').replace(/,/g, '') : +movieDetail.BoxOffice;
 	const metascore = +movieDetail.Metascore;
 	const imdbRating = +movieDetail.imdbRating;
 	const imdbVotes = +movieDetail.imdbVotes.replace(/,/g, '');
@@ -108,7 +108,7 @@ const movieTemplate = (movieDetail) => {
             <p class="subtitle">${awards} Awards</p>
         </div>
         <div class="notification is-primary" data-value=${dollars}>
-            <p class="title">${movieDetail.BoxOffice}</p>
+            <p class="title">${movieDetail.BoxOffice ? movieDetail.BoxOffice : 'Unknown'}</p>
             <p class="subtitle">Box Office</p>
         </div>
         <div class="notification is-primary" data-value=${metascore}>
